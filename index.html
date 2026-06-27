@@ -46,7 +46,8 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9000;
 .cursor-ring.big{width:64px;height:64px}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:26px clamp(24px,5vw,80px);display:flex;align-items:center;justify-content:space-between;transition:padding .5s var(--ease),background .5s}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:26px clamp(24px,5vw,80px);display:flex;align-items:center;justify-content:space-between;transition:padding .5s var(--ease),background .5s,opacity .5s var(--ease),transform .5s var(--ease);opacity:0;transform:translateY(-12px);pointer-events:none}
+nav.visible{opacity:1;transform:none;pointer-events:all}
 nav.scrolled{padding:14px clamp(24px,5vw,80px);background:rgba(2,2,2,.8);backdrop-filter:blur(20px);border-bottom:1px solid rgba(201,168,76,.1)}
 .nav-logo{font-family:var(--serif);font-size:19px;font-weight:300;letter-spacing:.28em;text-transform:uppercase;color:var(--white)}
 .nav-logo em{color:var(--gold);font-style:italic}
@@ -567,11 +568,14 @@ document.querySelectorAll('a,button,[onclick],.feat,.p-card').forEach(el=>{
   el.addEventListener('mouseleave',()=>ring.classList.remove('big'));
 });
 
-// NAV
-document.getElementById('nav').addEventListener('scroll',()=>{},false);
+// NAV — muncul hanya setelah scene video selesai
+const navEl = document.getElementById('nav');
 window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
-  document.getElementById('waFab').classList.toggle('show',window.scrollY>300);
+  const heroBottom = heroSec.offsetTop + heroSec.offsetHeight;
+  const pastHero   = window.scrollY + window.innerHeight > heroBottom;
+  navEl.classList.toggle('visible', pastHero);
+  navEl.classList.toggle('scrolled', pastHero);
+  document.getElementById('waFab').classList.toggle('show', window.scrollY > 300);
 },{passive:true});
 
 // HERO ENTRANCE (called after frames load)
