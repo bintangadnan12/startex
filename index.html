@@ -175,6 +175,72 @@ nav.scrolled{padding:14px clamp(24px,5vw,80px);background:rgba(2,2,2,.8);backdro
 .value-body strong{display:block;font-size:14px;font-weight:500;color:var(--white);margin-bottom:6px;letter-spacing:.02em}
 .value-body p{font-size:13px;line-height:1.7;color:var(--muted)}
 
+/* ── GARANSI ── */
+#garansi{padding:clamp(60px,8vw,100px) clamp(24px,5vw,80px);background:linear-gradient(135deg,rgba(201,168,76,.06) 0%,transparent 60%);border-top:1px solid rgba(201,168,76,.12);border-bottom:1px solid rgba(201,168,76,.12);text-align:center}
+.garansi-icon{font-size:48px;margin-bottom:20px}
+.garansi-title{font-family:var(--serif);font-size:clamp(28px,4vw,52px);font-weight:200;color:var(--white);margin-bottom:14px}
+.garansi-title em{color:var(--gold);font-style:italic}
+.garansi-desc{font-size:14px;color:var(--muted);max-width:560px;margin:0 auto;line-height:1.75}
+.garansi-desc strong{color:var(--white);font-weight:400}
+
+/* ── PRICING TABLE ── */
+#pricing{padding:clamp(80px,10vw,140px) clamp(24px,5vw,80px)}
+.pricing-header{text-align:center;margin-bottom:clamp(44px,6vw,72px)}
+.pricing-title{font-family:var(--serif);font-size:clamp(32px,5vw,64px);font-weight:200;color:var(--white);line-height:1.05}
+.pricing-title em{font-style:italic;color:var(--gold)}
+.pricing-sub{font-size:13px;color:var(--muted);margin-top:14px}
+.pricing-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid rgba(255,255,255,.08);max-width:960px;margin:0 auto}
+.pc{padding:40px 32px;border-right:1px solid rgba(255,255,255,.08);position:relative;transition:background .4s}
+.pc:last-child{border-right:none}
+.pc.featured{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);margin:-1px;z-index:1}
+.pc-label{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;display:block}
+.pc.featured .pc-label{color:var(--gold)}
+.pc-badge{position:absolute;top:16px;right:16px;font-size:8px;letter-spacing:.2em;text-transform:uppercase;background:var(--gold);color:var(--black);padding:4px 10px;font-weight:500}
+.pc-price{font-family:var(--serif);font-size:clamp(36px,5vw,60px);font-weight:200;color:var(--white);line-height:1}
+.pc.dim .pc-price{color:var(--muted)}
+.pc-price sub{font-size:14px;letter-spacing:.1em;vertical-align:middle;font-family:var(--sans)}
+.pc-name{font-size:13px;font-weight:500;color:var(--white);margin:16px 0 8px;letter-spacing:.04em}
+.pc.dim .pc-name{color:var(--muted)}
+.pc-desc{font-size:12px;color:var(--muted);line-height:1.65;margin-bottom:24px}
+.pc-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:28px}
+.pc-list li{font-size:12px;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
+.pc-list li::before{content:'✓';color:var(--gold);flex-shrink:0;font-size:11px;margin-top:1px}
+.pc.dim .pc-list li::before{color:rgba(255,255,255,.2)}
+.pc-cta{display:block;text-align:center;font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:13px;border:1px solid rgba(201,168,76,.3);color:var(--gold);transition:all .3s;cursor:pointer;text-decoration:none;font-family:var(--sans)}
+.pc.featured .pc-cta{background:var(--gold);color:var(--black);border-color:var(--gold)}
+.pc.featured .pc-cta:hover{background:var(--gold2)}
+.pc-cta:hover{border-color:var(--gold);background:rgba(201,168,76,.08)}
+.pc-strike{text-decoration:line-through;opacity:.4;font-size:.85em}
+
+/* ── PERBANDINGAN HARGA ── */
+#comparison{padding:clamp(80px,10vw,130px) clamp(24px,5vw,80px);background:var(--off-black)}
+.comp-title{font-family:var(--serif);font-size:clamp(30px,4.5vw,60px);font-weight:200;color:var(--white);margin-bottom:clamp(40px,5vw,64px);line-height:1.05}
+.comp-title em{font-style:italic;color:var(--gold)}
+.comp-table{width:100%;border-collapse:collapse;max-width:800px}
+.comp-table th{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);padding:14px 20px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06)}
+.comp-table th:last-child{color:var(--gold)}
+.comp-table td{padding:18px 20px;font-size:13px;color:var(--muted);border-bottom:1px solid rgba(255,255,255,.04)}
+.comp-table td:first-child{color:var(--white);font-weight:400}
+.comp-table td:last-child{color:var(--gold);font-weight:500}
+.comp-table tr:hover td{background:rgba(255,255,255,.02)}
+.comp-check{color:var(--gold)}
+.comp-x{color:rgba(255,255,255,.2)}
+
+/* ── FAQ ── */
+#faq{padding:clamp(80px,10vw,140px) clamp(24px,5vw,80px)}
+.faq-title{font-family:var(--serif);font-size:clamp(32px,5vw,64px);font-weight:200;color:var(--white);margin-bottom:clamp(40px,5vw,64px);line-height:1.05}
+.faq-title em{font-style:italic;color:var(--gold)}
+.faq-list{max-width:800px;display:flex;flex-direction:column;gap:0}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.06)}
+.faq-q{width:100%;background:none;border:none;padding:24px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-align:left;gap:20px}
+.faq-q-text{font-size:15px;font-weight:400;color:var(--white);line-height:1.4}
+.faq-icon{color:var(--gold);font-size:20px;flex-shrink:0;transition:transform .35s var(--ease);line-height:1}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .45s var(--ease)}
+.faq-a-inner{padding:0 0 24px;font-size:13px;line-height:1.8;color:var(--muted)}
+.faq-a-inner strong{color:var(--white);font-weight:400}
+.faq-item.open .faq-a{max-height:200px}
+
 /* ── CTA AKHIR ── */
 #cta{padding:clamp(100px,14vw,180px) clamp(24px,5vw,80px);text-align:center;background:linear-gradient(to bottom,var(--black),#0e0b02)}
 .cta-price-pill{display:inline-flex;align-items:center;gap:14px;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-dim);padding:10px 24px;margin-bottom:40px}
@@ -248,7 +314,8 @@ footer{padding:52px clamp(24px,5vw,80px);border-top:1px solid rgba(255,255,255,.
   <ul class="nav-links">
     <li><a onclick="goTo('#features')">Fitur</a></li>
     <li><a onclick="goTo('#portfolio')">Portfolio</a></li>
-    <li><a onclick="goTo('#price')">Harga</a></li>
+    <li><a onclick="goTo('#pricing')">Paket</a></li>
+    <li><a onclick="goTo('#faq')">FAQ</a></li>
     <li><a onclick="goTo('#cta')">Kontak</a></li>
   </ul>
   <a class="nav-cta" href="https://wa.me/6282319353075" target="_blank">Mulai Sekarang</a>
@@ -507,6 +574,180 @@ footer{padding:52px clamp(24px,5vw,80px);border-top:1px solid rgba(255,255,255,.
   </div>
 </section>
 
+<!-- GARANSI -->
+<section id="garansi">
+  <div class="garansi-icon reveal">🛡️</div>
+  <h2 class="garansi-title reveal d1">Tidak puas? <em>Full refund</em><br>dalam 7 hari pertama.</h2>
+  <p class="garansi-desc reveal d2">
+    Kami yakin dengan kualitas kerja kami. Tapi kalau website yang kami buat
+    <strong>tidak sesuai ekspektasi dalam 7 hari pertama</strong> — kami kembalikan
+    pembayaran Anda 100%. Tanpa pertanyaan, tanpa ribet.
+  </p>
+</section>
+
+<!-- PRICING TABLE -->
+<section id="pricing">
+  <div style="max-width:960px;margin:0 auto">
+    <div class="pricing-header">
+      <h2 class="pricing-title reveal">Pilih paket yang <em>paling cocok</em></h2>
+      <p class="pricing-sub reveal d1">Semua paket sudah termasuk domain, hosting, dan maintenance.</p>
+    </div>
+    <div class="pricing-cards reveal d1">
+      <!-- PAKET STARTER (anchor bawah) -->
+      <div class="pc dim">
+        <span class="pc-label">Mulai dari</span>
+        <div class="pc-price">Rp<br>150rb<sub>/bln</sub></div>
+        <div class="pc-name">Starter</div>
+        <div class="pc-desc">Cocok untuk usaha yang baru mau go-online pertama kali.</div>
+        <ul class="pc-list">
+          <li>Website online 24 jam</li>
+          <li>Domain & hosting included</li>
+          <li>Tombol WhatsApp</li>
+          <li>Galeri foto produk</li>
+          <li>Mobile-friendly design</li>
+          <li>Maintenance & keamanan</li>
+        </ul>
+        <a class="pc-cta" href="https://wa.me/6282319353075?text=Halo%20Startex%2C%20saya%20mau%20paket%20Starter." target="_blank">Pilih Starter</a>
+      </div>
+      <!-- PAKET UTAMA (featured) -->
+      <div class="pc featured">
+        <span class="pc-badge">Paling Populer</span>
+        <span class="pc-label">Terbaik untuk UMKM</span>
+        <div class="pc-price">Rp<br>150rb<sub>/bln</sub></div>
+        <div class="pc-name">Profesional</div>
+        <div class="pc-desc">Semua yang UMKM butuhkan untuk tampil serius dan dipercaya customer.</div>
+        <ul class="pc-list">
+          <li>Semua fitur Starter</li>
+          <li>Desain custom & premium</li>
+          <li>Info usaha lengkap</li>
+          <li>Link bio siap pakai</li>
+          <li>Garansi revisi 2x</li>
+          <li>Support WhatsApp</li>
+        </ul>
+        <a class="pc-cta" href="https://wa.me/6282319353075?text=Halo%20Startex%2C%20saya%20mau%20paket%20Profesional." target="_blank">Pilih Paket Ini</a>
+      </div>
+      <!-- PAKET PREMIUM (anchor atas — decoy) -->
+      <div class="pc">
+        <span class="pc-label">Lengkap & siap jual</span>
+        <div class="pc-price">Rp<br>250rb<sub>/bln</sub></div>
+        <div class="pc-name">Premium</div>
+        <div class="pc-desc">Untuk usaha yang butuh konten siap publish — teks, copywriting, dan strategi.</div>
+        <ul class="pc-list">
+          <li>Semua fitur Profesional</li>
+          <li>Copywriting halaman utama</li>
+          <li>Optimasi SEO dasar</li>
+          <li>Konten promo 1x/bulan</li>
+          <li>Konsultasi bisnis digital</li>
+          <li>Prioritas revisi</li>
+        </ul>
+        <a class="pc-cta" href="https://wa.me/6282319353075?text=Halo%20Startex%2C%20saya%20mau%20paket%20Premium." target="_blank">Pilih Premium</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERBANDINGAN HARGA -->
+<section id="comparison">
+  <div style="max-width:900px;margin:0 auto">
+    <h2 class="comp-title reveal">Berapa biaya kalau<br><em>tidak pakai Startex?</em></h2>
+    <table class="comp-table reveal d1">
+      <thead>
+        <tr>
+          <th>Opsi</th>
+          <th>Biaya</th>
+          <th>Waktu Setup</th>
+          <th>Support</th>
+          <th style="text-align:right">Startex</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bikin sendiri (WordPress)</td>
+          <td>Rp 2–5 jt/tahun</td>
+          <td>2–4 minggu</td>
+          <td class="comp-x">Sendiri</td>
+          <td style="text-align:right" class="comp-check">✓ Lebih hemat</td>
+        </tr>
+        <tr>
+          <td>Freelancer / jasa lain</td>
+          <td>Rp 500rb–2 jt/bln</td>
+          <td>1–3 minggu</td>
+          <td class="comp-x">Tidak pasti</td>
+          <td style="text-align:right" class="comp-check">✓ Lebih murah</td>
+        </tr>
+        <tr>
+          <td>Tidak punya website</td>
+          <td>Rp 0</td>
+          <td>—</td>
+          <td class="comp-x">Tidak ada</td>
+          <td style="text-align:right" class="comp-check">✓ Potensi lebih banyak order</td>
+        </tr>
+        <tr style="background:rgba(201,168,76,.04)">
+          <td style="color:var(--gold);font-weight:500">✦ Startex</td>
+          <td style="color:var(--gold);font-weight:500">Rp 150rb/bln</td>
+          <td style="color:var(--gold)">3–5 hari kerja</td>
+          <td style="color:var(--gold)">WhatsApp langsung</td>
+          <td style="text-align:right;color:var(--gold)">🏆 Pilihan terbaik</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div style="max-width:800px">
+    <h2 class="faq-title reveal">Pertanyaan yang<br>sering <em>ditanyakan</em></h2>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Kalau saya stop berlangganan, website-nya gimana?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Website akan dinonaktifkan sementara. Tapi <strong>semua data dan desain website Anda tetap kami simpan selama 3 bulan</strong> — jadi kalau Anda ingin aktifkan lagi, tinggal lanjut bayar dan langsung online kembali tanpa setup ulang.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal d1">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Domain-nya punya saya atau punya Startex?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Domain terdaftar atas nama usaha Anda. <strong>Anda punya akses penuh ke domain tersebut</strong>. Jika suatu saat ingin pindah atau kelola sendiri, kami bantu prosesnya tanpa biaya tambahan.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal d2">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Bisa edit sendiri kalau mau ganti foto atau teks?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Untuk perubahan kecil seperti ganti foto produk, jam operasional, atau nomor kontak — <strong>cukup chat WhatsApp kami, selesai dalam 1×24 jam</strong>. Tanpa biaya tambahan, sudah termasuk dalam langganan.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal d3">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Berapa lama website saya jadi?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner"><strong>3–5 hari kerja</strong> setelah Anda kirim materi (foto produk, info usaha, nomor WA). Proses cepat karena kami sudah punya template yang bisa langsung disesuaikan untuk jenis usaha Anda.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal d4">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Pembayaran dilakukan setiap bulan atau bisa tahunan?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Bisa keduanya. Bayar bulanan Rp 150.000, atau <strong>bayar tahunan Rp 1.500.000 dan hemat 2 bulan</strong> (setara 2 bulan gratis). Pembayaran via transfer bank atau e-wallet — fleksibel sesuai preferensi Anda.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA AKHIR -->
 <section id="cta">
   <div class="cta-price-pill reveal">✦ &nbsp;Hanya Rp 5.000 / hari&nbsp; ✦</div>
@@ -655,6 +896,14 @@ window.addEventListener('scroll',()=>{
 
 // SMOOTH SCROLL
 function goTo(sel){document.querySelector(sel)?.scrollIntoView({behavior:'smooth'})}
+
+// FAQ TOGGLE
+function toggleFaq(btn){
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
 
 // INTERSECTION REVEAL
 const obs=new IntersectionObserver(entries=>{
